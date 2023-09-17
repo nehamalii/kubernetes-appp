@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: vprodb
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: nehamalii/vprofiledb
+          image: vprofile/vprofiledb:V1
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
