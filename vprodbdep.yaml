@@ -22,7 +22,7 @@ spec:
           #- "lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
-              name: vpro-db-data
+              name: vpro-db-data1
           ports:
             - name: vprodb-port
               containerPort: 3306
