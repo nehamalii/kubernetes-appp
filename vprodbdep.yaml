@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb
+          image: vprofile/vprofiledb:V1
             #args:
           #- "--ignore-db-dir"
           #- "lost+found"
@@ -33,7 +33,7 @@ spec:
                   name: app-secret
                   key: db-pass
       nodeSelector:
-        zone: us-east-1a
+        zone: us-east-1b
       volumes:
         - name: vpro-db-data
           # This AWS EBS volume must already exist.
