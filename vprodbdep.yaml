@@ -35,7 +35,7 @@ spec:
       nodeSelector:
         zone: us-east-1a
       volumes:
-        - name: vpro-db-data
+        - name: vpro-db-data1
           # This AWS EBS volume must already exist.
           awsElasticBlockStore:
             volumeID: vol-0a80869a12f1ccc52
@@ -46,5 +46,5 @@ spec:
           image: busybox:latest
           args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
           volumeMounts:
-            - name: "vpro-db-data"
+            - name: vpro-db-data1
               mountPath: /var/lib/mysql
